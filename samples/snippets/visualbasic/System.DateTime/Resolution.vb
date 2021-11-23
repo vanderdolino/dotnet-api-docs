@@ -10,13 +10,10 @@ Module Resolution
         ' <Snippet1>
         Dim output As String = ""
         For ctr As Integer = 0 To 20
-            output += Date.Now.Millisecond.ToString() + vbCrLf
-            ' Introduce a delay loop.
-            For delay As Integer = 0 To 1000
-            Next
+            output &= Date.Now.Milliseconds.ToString() & vbCrLf
 
             If ctr = 10 Then
-                output += "Thread.Sleep called..." + vbCrLf
+                output &= "Thread.Sleep called..." & vbCrLf
                 Thread.Sleep(5)
             End If
         Next
